@@ -1,0 +1,40 @@
+# safe-rm Configuration Example
+# Copy this file to ~/.config/safe-rm/config.yml
+
+# Trash directory location
+# Default: ~/.local/share/safe-rm/trash
+# You can use ~ for home directory
+trash_dir: ~/.local/share/safe-rm/trash
+
+# Retention period in days
+# Items older than this will be purged when running --safe-purge
+# Default: 30
+retention_days: 30
+
+# Additional protected paths
+# These paths will be blocked or require confirmation before deletion
+# Supports glob patterns:
+#   - * matches any characters in a single path component
+#   - ** matches any characters across path components
+# Note: System directories (/home, /usr, /etc, etc.) and .git directories
+# are always protected by default
+protected_paths:
+  # Example: Protect SSH keys
+  # - ~/.ssh/*
+  
+  # Example: Protect important documents
+  # - ~/Documents/**
+  
+  # Example: Protect specific file
+  # - /etc/passwd
+
+# Behavior when attempting to delete protected paths
+# Options:
+#   - "confirm": Require typing 'yes I am sure' to proceed (default)
+#   - "block": Always block, cannot be bypassed
+# For automated/CI environments, use "block" for maximum safety
+protected_behavior: confirm
+
+# Show detailed warnings for potentially dangerous operations
+# Default: true
+verbose_warnings: true
