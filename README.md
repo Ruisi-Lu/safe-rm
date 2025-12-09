@@ -28,6 +28,34 @@ Modern development workflows increasingly involve AI-powered tools and automatio
 
 ## Installation
 
+### Pre-compiled Binaries (Recommended)
+
+Download the latest pre-compiled binary from the [GitHub Releases](https://github.com/Ruisi-Lu/safe-rm/releases) page:
+
+```bash
+# Linux (amd64)
+curl -L https://github.com/Ruisi-Lu/safe-rm/releases/latest/download/rm-linux-amd64 -o rm
+chmod +x rm
+
+# Linux (arm64)
+curl -L https://github.com/Ruisi-Lu/safe-rm/releases/latest/download/rm-linux-arm64 -o rm
+chmod +x rm
+
+# macOS (Apple Silicon)
+curl -L https://github.com/Ruisi-Lu/safe-rm/releases/latest/download/rm-darwin-arm64 -o rm
+chmod +x rm
+
+# macOS (Intel)
+curl -L https://github.com/Ruisi-Lu/safe-rm/releases/latest/download/rm-darwin-amd64 -o rm
+chmod +x rm
+```
+
+Then move the binary to your PATH:
+
+```bash
+mv rm ~/.local/bin/rm
+```
+
 ### Building from Source
 
 ```bash
